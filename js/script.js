@@ -40,6 +40,7 @@ for (let i = 0; i < numBalls; i++) {
   balls.push(ball);
   document.body.append(ball);
 }
+
 // Keyframes
 balls.forEach((el, i, ra) => {
   let to = {
@@ -63,12 +64,11 @@ balls.forEach((el, i, ra) => {
 });
 
 // active menu
-$(document).ready(function () {
-  $(".nav_link").click(function () {
-    $(".nav_link").removeClass("active_nav");
-    $(this).addClass("active_nav");
-  });
+$(".nav_link").click(function () {
+  $(".active_nav").removeClass("active_nav");
+  $(this).addClass("active_nav");
 });
+
 // scrool nav
 window.addEventListener("scroll", function () {
   let navBar = this.document.querySelector("nav");
@@ -110,7 +110,7 @@ function hideMenu() {
   m4.style.marginLeft = "300px";
   m5.style.marginLeft = "300px";
   m6.style.marginLeft = "300px";
-  bar.style.top = "10px";
+  bar.style.top = "0";
   hide.style.right = "-200px";
 }
 
@@ -140,9 +140,22 @@ new VenoBox({
 });
 
 // counter
-$(".count_up").counterUp({
-  delay: 5,
-  time: 800,
+let totalNumber = document.querySelectorAll(".counter-text");
+let getNumber = Array.from(totalNumber);
+
+getNumber.map((viewNumber) => {
+  console.log(viewNumber.dataset.number);
+  let startCount = 0;
+  let counterUP = () => {
+    startCount++;
+    viewNumber.innerHTML = `${startCount}`;
+    if (startCount == viewNumber.dataset.number) {
+      clearInterval(countStop);
+    }
+  };
+  let countStop = setInterval(() => {
+    counterUP();
+  }, 10);
 });
 
 // counter
@@ -245,7 +258,7 @@ var swiper = new Swiper(".blog-slider", {
   loop: true,
   autoplay: true,
   mousewheel: {
-    invert: false,
+    invert: true,
   },
   // autoHeight: true,
   pagination: {

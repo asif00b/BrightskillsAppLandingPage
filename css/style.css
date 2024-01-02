@@ -25,8 +25,6 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-/* =========================  common css */
-
 a {
   display: inline-block;
   text-decoration: none;
@@ -106,8 +104,7 @@ body {
   border-radius: 50%;
 }
 /*=========================   main css start here  */
-
-/*===================================== navbar styling */
+/* navbar */
 nav {
   position: absolute;
   top: 30px;
@@ -149,14 +146,6 @@ nav .menu ul li .nav_link {
   color: var(--c2);
   position: relative;
   cursor: pointer;
-  transition: all 0.3s linear;
-}
-nav .menu ul li .nav_link:hover {
-  transform: scale(1.08);
-  color: var(--c1);
-}
-nav .menu ul li .nav_link:hover::after {
-  width: 100%;
 }
 nav .menu ul li .nav_link::after {
   content: "";
@@ -166,14 +155,25 @@ nav .menu ul li .nav_link::after {
   position: absolute;
   bottom: 0;
   left: 50%;
-  transition: all 0.3s linear;
+  transition: 0.3s;
   transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
   z-index: -1;
+}
+nav .menu ul li .nav_link:hover::after {
+  width: 100%;
+  box-shadow: 0px -14px 20px 7px white;
 }
 .active_nav {
   color: var(--c1) !important;
   font-weight: 700;
-  transform: scale(1.1);
 }
 nav .n_btn .nav_btn {
   font-size: 1rem;
@@ -189,8 +189,40 @@ nav .n_btn .nav_btn {
   position: relative;
   transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
   box-shadow: 1px 1px 2px 0px rgb(0 0 0 / 65%);
+  -webkit-transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  -moz-transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  -ms-transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  -o-transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  animation: hero-btn 2s ease infinite;
+  -webkit-animation: nav-btn 2s ease infinite;
 }
-
+@keyframes nav-btn {
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+  50% {
+    transform: scale(0.98);
+    -webkit-transform: scale(0.98);
+    -moz-transform: scale(0.98);
+    -ms-transform: scale(0.98);
+    -o-transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+}
 nav .n_btn .nav_btn:focus {
   outline: 0;
 }
@@ -294,8 +326,7 @@ nav .n_btn .nav_btn.animate:after {
   }
 }
 
-/* ========================  banner styling */
-
+/* banner */
 #hero_section {
   width: 100%;
   height: 100vh;
@@ -384,7 +415,7 @@ nav .n_btn .nav_btn.animate:after {
   width: 50%;
   position: absolute;
   top: 50%;
-  left: -14%;
+  left: -9%;
   transform: translateY(-50%);
 }
 #hero_section .pm .hero {
@@ -628,9 +659,9 @@ nav .n_btn .nav_btn.animate:after {
   }
 }
 
-/*============================== about styling */
+/* about */
 #about {
-  padding: 6% 0 2%;
+  padding: 5% 0;
 }
 #about .about_us {
   display: flex;
@@ -709,9 +740,9 @@ nav .n_btn .nav_btn.animate:after {
   }
 }
 
-/*===============================   counter styling */
+/* counter */
 #counter {
-  padding: 2% 0 4%;
+  padding: 3% 0 0;
 }
 #counter .counterup {
   cursor: pointer;
@@ -749,63 +780,15 @@ nav .n_btn .nav_btn.animate:after {
   color: var(--c3);
 }
 
-/*============================== usage styling */
+/* usage */
 #usage {
-  padding: 5% 0 1%;
-  background: var(--sect_bg2);
-}
-#usage .title {
-  margin-bottom: 60px;
+  padding: 9% 0 1%;
+  background: var(--sect_bg);
 }
 #usage .main .u_card {
   text-align: center;
   color: var(--c3);
   position: relative;
-}
-#usage .main .u_card .icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto;
-  border-radius: 50%;
-  overflow: hidden;
-}
-#usage .main .u_card .icon i {
-  font-size: 3.4em;
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
-  color: var(--c2);
-  background-image: linear-gradient(
-    to right top,
-    #e5a9a5,
-    #ebbdc7,
-    #eed4e2,
-    #f2eaf4,
-    #ffffff
-  );
-  border-radius: 30% 70% 61% 39% / 30% 30% 70% 70%;
-  transition: all 0.2s linear;
-  animation: use 5s linear infinite;
-}
-@keyframes use {
-  0% {
-    border-radius: 30% 70% 61% 39% / 30% 30% 70% 70%;
-  }
-  25% {
-    border-radius: 52% 48% 66% 34% / 34% 49% 51% 66%;
-  }
-  50% {
-    border-radius: 50%;
-  }
-  75% {
-    border-radius: 65% 35% 36% 64% / 54% 66% 34% 46%;
-  }
-  100% {
-    border-radius: 30% 70% 61% 39% / 30% 30% 70% 70%;
-  }
-}
-#usage .main .u_card .icon i:hover {
-  transform: scale(1.1);
 }
 #usage .main .u_card .txt h4 {
   font-size: 3em;
@@ -861,28 +844,41 @@ nav .n_btn .nav_btn.animate:after {
     transform: translateY(0) rotate(90deg);
   }
 }
-
-/*================================= feature styling */
+/* feature */
 
 #features {
-  padding: 6% 0 0;
+  padding: 2% 0 0;
   overflow: hidden;
-}
-#features .main {
-  margin-top: 70px;
 }
 #features .main .feature {
   background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0px 0px 4px -1px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
   border-radius: 10px;
   margin-bottom: 30px;
-  padding: 20px;
+  padding: 10px;
   cursor: pointer;
-  transition: all 0.2s linear;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
 }
 #features .main .feature:hover {
-  transform: scale(1.02);
-  box-shadow: 0px 0px 4px -1px rgba(255, 111, 86, 0.6);
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  box-shadow: 0 8px 32px 0 rgba(255, 111, 86, 0.37);
+}
+#features .main .feature:hover img {
+  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
 }
 
 #features .main .left_features .feature {
@@ -925,8 +921,11 @@ nav .n_btn .nav_btn.animate:after {
 }
 #features .main .feature .icon img {
   width: 100%;
-  transition: all 0.2s linear;
-  margin-bottom: 10px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
 }
 #features .main .right_features .feature .icon {
   width: 50px;
@@ -937,7 +936,6 @@ nav .n_btn .nav_btn.animate:after {
   font-weight: 500;
   text-transform: uppercase;
   color: var(--c1);
-  transition: all 0.2s linear;
 }
 #features .main .txt p {
   font-size: 1.5em;
@@ -945,7 +943,6 @@ nav .n_btn .nav_btn.animate:after {
   line-height: 25px;
   margin-bottom: 0;
   margin-top: 5px !important;
-  transition: all 0.2s linear;
 }
 #features .f_mockup img {
   width: 100%;
@@ -958,12 +955,10 @@ nav .n_btn .nav_btn.animate:after {
   content: "";
   position: absolute;
   z-index: -1;
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   border-radius: 46% 53% 39% 46% / 46% 49% 48% 43%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  left: -20%;
   background-image: linear-gradient(
     to right,
     #df6812,
@@ -980,114 +975,309 @@ nav .n_btn .nav_btn.animate:after {
     #ff9d57
   );
   opacity: 0.6;
+  -webkit-border-radius: 46% 53% 39% 46% / 46% 49% 48% 43%;
+  -moz-border-radius: 46% 53% 39% 46% / 46% 49% 48% 43%;
+  -ms-border-radius: 46% 53% 39% 46% / 46% 49% 48% 43%;
+  -o-border-radius: 46% 53% 39% 46% / 46% 49% 48% 43%;
   animation: mock 10s cubic-bezier(0, 0, 1, 1) infinite;
+  -webkit-animation: mock 10s cubic-bezier(0, 0, 1, 1) infinite;
 }
 @keyframes mock {
   100% {
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
   }
 }
-/* ==================================== why-us styling */
+/* why-us */
 #why_us {
-  padding: 6% 0 2%;
+  padding: 5% 0 2%;
   background: var(--sect_bg2);
 }
-#why_us .main {
-  margin-top: 60px;
-}
-#why_us .card_gap {
-  row-gap: 30px;
-}
-#why_us .main .my_card {
-  padding: 40px 10px;
-  text-align: center;
-  background: #ffffff;
-  border-radius: 40px;
-  position: relative;
-  box-shadow: 1px 1px 2px -1px rgb(0 0 0 / 50%);
-  transition: all 0.3s ease;
-  overflow: hidden;
-}
-#why_us .main .my_card .card_body {
-  position: relative;
-  z-index: 2;
-}
-#why_us .main .my_card::before {
-  content: "";
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  bottom: -400px;
-  right: -400px;
-  border-radius: 50%;
-  background: var(--c1);
-  transition: all 0.3s ease-in-out;
-  z-index: 1;
-  animation: none;
-  transition-delay: 0.1s;
-}
-#why_us .main .my_card:hover::before {
-  bottom: -50px;
-  right: -50px;
-}
-#why_us .main .my_card::after {
-  content: "";
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  top: -500px;
-  left: -500px;
-  border-radius: 50%;
-  background: var(--c2);
-  transition: all 0.4s ease-in-out;
-  z-index: 1;
-  animation: none;
-}
-#why_us .main .my_card:hover::after {
-  top: -200px;
-  left: -190px;
+
+/* Main heading for card's front cover */
+#why_us .card-front__heading {
+  font-size: 1.5rem;
+  margin-top: 0.25rem;
 }
 
-#why_us .main .my_card .icon {
-  margin-bottom: 20px;
+/* Main heading for inside page */
+#why_us .inside-page__heading {
+  padding-bottom: 1rem;
+  width: 100%;
 }
-#why_us .main .my_card .icon i {
-  font-size: 6em;
-  color: var(--c2);
-  transition: all 0.4s ease-in-out;
-  transition-delay: 0.2s;
+
+/* Mixed */
+
+/* For both inside page's main heading and 'view me' text on card front cover */
+#why_us .inside-page__heading,
+.card-front__text-view {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-top: 0.2rem;
 }
-#why_us .main .my_card:hover .icon i {
-  color: #ffffff;
+
+#why_us .inside-page__heading--city,
+.card-front__text-view--city {
+  color: var(--c1);
 }
-#why_us .main .my_card .text h4 {
-  font-size: 3em;
+
+/* Front cover */
+
+#why_us .card-front__tp {
+  color: #fafbfa;
+}
+
+/* For pricing text on card front cover */
+#why_us .card-front__text-price {
+  font-size: 1.2rem;
+  margin-top: -0.2rem;
+}
+
+/* Back cover */
+
+/* For inside page's body text */
+#why_us .inside-page__text {
+  color: #333;
+}
+
+/* Icons ===========================================*/
+
+#why_us .card-front__icon {
+  fill: #fafbfa;
+  font-size: 3vw;
+  height: 3.25rem;
+  margin-top: -0.5rem;
+  width: 3.25rem;
+}
+
+/* Buttons =================================================*/
+
+#why_us .inside-page__btn {
+  background-color: transparent;
+  border: 3px solid;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  margin: 10px 0;
-  color: var(--c3);
-  text-transform: uppercase;
-  transition: all 0.4s ease-in-out;
-  transition-delay: 0.2s;
-}
-#why_us .main .my_card:hover .text h4 {
-  color: #ffffff;
-}
-#why_us .main .my_card .text p {
-  font-size: 1.8em;
-  width: 80%;
-  margin: 0 auto;
-  color: var(--c4);
-  transition: all 0.4s ease-in-out;
-  transition-delay: 0.2s;
-}
-#why_us .main .my_card:hover .text p {
-  color: #efefef;
+  margin-top: 2rem;
+  overflow: hidden;
+  padding: 0.7rem 0.75rem;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: 90%;
+  z-index: 10;
 }
 
-/* ============================ review styling */
+#why_us .inside-page__btn::before {
+  content: "";
+  width: 101%;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: scaleY(0);
+  transition: all 0.3s ease;
+  z-index: -1;
+  animation: none;
+  -webkit-animation: none;
+}
 
+#why_us .inside-page__btn--city {
+  border-color: var(--fuschia);
+  color: var(--fuschia);
+}
+
+#why_us .inside-page__btn--city::before {
+  background-color: var(--fuschia);
+}
+
+#why_us .inside-page__btn:hover {
+  color: #fafbfa;
+}
+
+#why_us .inside-page__btn:hover::before {
+  transform: scaleY(1);
+  -webkit-transform: scaleY(1);
+  -moz-transform: scaleY(1);
+  -ms-transform: scaleY(1);
+  -o-transform: scaleY(1);
+}
+
+/* Layout Structure=========================================*/
+
+#why_us .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Container to hold all cards in one place */
+#why_us .card-area {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+/* Card ============================================*/
+
+/* Area to hold an individual card */
+#why_us .card-section {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+/* A container to hold the flip card and the inside page */
+#why_us .card {
+  background-color: rgba(0, 0, 0, 0.05);
+  box-shadow: -0.1rem 1.7rem 6.6rem -3.2rem rgba(0, 0, 0, 0.5);
+  height: 15rem;
+  position: relative;
+  transition: all 1s ease;
+  width: 15rem;
+}
+
+/* Flip card - covering both the front and inside front page */
+
+/* An outer container to hold the flip card. This excludes the inside page */
+#why_us .flip-card {
+  height: 15rem;
+  perspective: 100rem;
+  position: absolute;
+  right: 0;
+  transition: all 1s ease;
+  visibility: hidden;
+  width: 15rem;
+  z-index: 100;
+}
+
+/* The outer container's visibility is set to hidden. This is to make everything within the container NOT set to hidden  */
+/* This is done so content in the inside page can be selected */
+#why_us .flip-card > * {
+  visibility: visible;
+}
+
+/* An inner container to hold the flip card. This excludes the inside page */
+#why_us .flip-card__container {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+  width: 100%;
+}
+
+#why_us .card-front,
+.card-back {
+  backface-visibility: hidden;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* Styling for the front side of the flip card */
+
+/* container for the front side */
+#why_us .card-front {
+  background-color: #fafbfa;
+  height: 15rem;
+  width: 15rem;
+}
+
+/* Front side's top section */
+#why_us .card-front__tp {
+  align-items: center;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 57% 90%, 50% 100%, 43% 90%, 0 90%);
+  display: flex;
+  flex-direction: column;
+  height: 12rem;
+  justify-content: center;
+  padding: 0.75rem;
+}
+
+#why_us .card-front__tp--city {
+  background: linear-gradient(to bottom, #ff73b9, var(--fuschia));
+}
+
+/* Front card's bottom section */
+#why_us .card-front__bt {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* Styling for the back side of the flip card */
+
+#why_us .card-back {
+  background-color: #fafbfa;
+  transform: rotateY(180deg);
+}
+
+/* Specifically targeting the <video> element */
+#why_us .video__container {
+  clip-path: polygon(0% 0%, 100% 0%, 90% 50%, 100% 100%, 0% 100%);
+  height: auto;
+  min-height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Inside page */
+
+#why_us .inside-page {
+  background-color: #fafbfa;
+  box-shadow: inset 20rem 0px 5rem -2.5rem rgba(0, 0, 0, 0.25);
+  height: 100%;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  transition: all 1s ease;
+  width: 15rem;
+  z-index: 1;
+}
+
+#why_us .inside-page__container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+}
+
+/* Functionality ====================================*/
+
+/* This is to keep the card centered (within its container) when opened */
+#why_us .card:hover {
+  box-shadow: -0.1rem 1.7rem 6.6rem -3.2rem rgba(0, 0, 0, 0.75);
+  width: 30rem;
+}
+
+/* When the card is hovered, the flip card container will rotate */
+#why_us .card:hover .flip-card__container {
+  transform: rotateY(-180deg);
+}
+
+/* When the card is hovered, the shadow on the inside page will shrink to the left */
+#why_us .card:hover .inside-page {
+  box-shadow: inset 1rem 0px 5rem -2.5rem rgba(0, 0, 0, 0.1);
+}
+
+/* testomoials */
 #review {
-  padding: 4% 0;
+  padding: 3% 0;
 }
 
 #review .customer-feedback .owl-item img {
@@ -1266,14 +1456,14 @@ nav .n_btn .nav_btn.animate:after {
   background-color: rgb(251, 90, 13);
 }
 
-/*================================== screenshot styling */
+/* screenshot */
 #screenshot {
-  padding: 5% 0;
+  padding: 2% 0 4%;
   background: var(--sect_bg2);
 }
 #screenshot .carousel {
   position: relative;
-  margin-top: 70px;
+  margin-top: 40px;
 }
 #screenshot .carousel-cell {
   width: 17vw;
@@ -1299,7 +1489,7 @@ nav .n_btn .nav_btn.animate:after {
   animation: none;
 }
 #screenshot img.screen {
-  width: 100%;
+  width: 98%;
 }
 #screenshot .carousel-cell.is-selected {
   opacity: 1;
@@ -1308,14 +1498,14 @@ nav .n_btn .nav_btn.animate:after {
 #screenshot .flickity-page-dots {
   bottom: -40px;
 }
-#screenshot .flickity-page-dots .dot.is-selected {
+.flickity-page-dots .dot.is-selected {
   opacity: 1;
   background-color: var(--c1);
   border-radius: 25px;
   width: 15px;
   transition: all 0.3s;
 }
-#screenshot .flickity-page-dots .dot {
+.flickity-page-dots .dot {
   display: none;
 }
 #screenshot .flickity-prev-next-button.next,
@@ -1337,11 +1527,9 @@ nav .n_btn .nav_btn.animate:after {
   opacity: 0.7;
   transition: opacity 0.225s ease-in-out, transform 0.225s ease-in-out;
 }
-
-/* ===========================  contact  styling */
-
+/* contact */
 #contact {
-  padding: 6% 0;
+  padding: 3% 0;
 }
 #contact .main .sub-title {
   text-align: center;
@@ -1354,7 +1542,7 @@ nav .n_btn .nav_btn.animate:after {
   color: #fd3838;
 }
 
-#contact .blog-slider {
+.blog-slider {
   width: 95%;
   position: relative;
   max-width: 800px;
@@ -1367,129 +1555,117 @@ nav .n_btn .nav_btn.animate:after {
   transition: all 0.3s;
 }
 
-#contact .blog-slider__item {
+.blog-slider__item {
   display: flex;
   align-items: center;
 }
 
-#contact .blog-slider__item.swiper-slide-active .blog-slider__img img {
+.blog-slider__item.swiper-slide-active .blog-slider__img img {
   opacity: 1;
   transition-delay: 0.3s;
 }
-#contact .blog-slider__item.swiper-slide-active .blog-slider__content > * {
+.blog-slider__item.swiper-slide-active .blog-slider__content > * {
   opacity: 1;
   transform: none;
 }
-#contact
-  .blog-slider__item.swiper-slide-active
-  .blog-slider__content
-  > *:nth-child(1) {
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(1) {
   transition-delay: 0.3s;
 }
-#contact
-  .blog-slider__item.swiper-slide-active
-  .blog-slider__content
-  > *:nth-child(2) {
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(2) {
   transition-delay: 0.4s;
 }
-#contact
-  .blog-slider__item.swiper-slide-active
-  .blog-slider__content
-  > *:nth-child(3) {
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(3) {
   transition-delay: 0.5s;
 }
-#contact
-  .blog-slider__item.swiper-slide-active
-  .blog-slider__content
-  > *:nth-child(4) {
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(4) {
   transition-delay: 0.6s;
 }
-#contact
-  .blog-slider__item.swiper-slide-active
-  .blog-slider__content
-  > *:nth-child(5) {
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(5) {
   transition-delay: 0.7s;
 }
-#contact
-  .blog-slider__item.swiper-slide-active
-  .blog-slider__content
-  > *:nth-child(6) {
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(6) {
   transition-delay: 0.8s;
 }
-#contact
-  .blog-slider__item.swiper-slide-active
-  .blog-slider__content
-  > *:nth-child(7) {
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(7) {
   transition-delay: 0.9s;
 }
-#contact
-  .blog-slider__item.swiper-slide-active
-  .blog-slider__content
-  > *:nth-child(8) {
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(8) {
   transition-delay: 1s;
 }
-#contact
-  .blog-slider__item.swiper-slide-active
-  .blog-slider__content
-  > *:nth-child(9) {
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(9) {
   transition-delay: 1.1s;
 }
-
-#contact .blog-slider__img {
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(10) {
+  transition-delay: 1.2s;
+}
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(11) {
+  transition-delay: 1.3s;
+}
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(12) {
+  transition-delay: 1.4s;
+}
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(13) {
+  transition-delay: 1.5s;
+}
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(14) {
+  transition-delay: 1.6s;
+}
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(15) {
+  transition-delay: 1.7s;
+}
+.blog-slider__img {
   width: 200px;
   flex-shrink: 0;
   height: 200px;
   background-image: linear-gradient(147deg, #fe8b39b3 0%, #fd383890 74%);
-  box-shadow: 1px 1px 4px 1px rgba(252, 157, 56, 0.1);
+  box-shadow: 1px 1px 8px 1px rgba(252, 157, 56, 0.2);
   border-radius: 20px;
   transform: translateX(-80px);
   overflow: hidden;
 }
 
-#contact .blog-slider__img img {
+.blog-slider__img img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
   opacity: 0;
+  border-radius: 20px;
   transition: all 0.3s;
 }
 
-#contact .blog-slider__content {
+.blog-slider__content {
   padding-right: 25px;
 }
 
-#contact .blog-slider__content > * {
+.blog-slider__content > * {
   opacity: 0;
   transform: translateY(25px);
   transition: all 0.4s;
 }
-#contact .blog-slider__code {
+.blog-slider__code {
   color: #7b7992;
   margin-bottom: 15px;
   display: block;
   font-weight: 500;
   font-size: 1.5em;
 }
-#contact .blog-slider__title {
+.blog-slider__title {
   font-size: 24px;
   font-weight: 700;
   color: #0d0925;
   margin-bottom: 20px;
 }
-#contact .blog-slider__text {
+.blog-slider__text {
   color: #4e4a67;
   margin-bottom: 30px;
   line-height: 1.5em;
-  font-size: 1.5em;
 }
-
-#contact .blog-slider__button {
-  display: inline-block;
+.blog-slider__button {
+  display: inline-flex;
   background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 50%;
+  padding: 15px 35px;
+  border-radius: 50px;
   color: #fff;
   box-shadow: 0px 14px 80px rgba(252, 56, 56, 0.4);
   text-decoration: none;
@@ -1497,22 +1673,16 @@ nav .n_btn .nav_btn.animate:after {
   justify-content: center;
   text-align: center;
   letter-spacing: 1px;
-  font-size: 2.5em;
-  margin-right: 15px;
-  transition: all 0.3s ease;
-}
-#contact .blog-slider__button:hover {
-  transform: scale(1.1);
 }
 
-#contact .blog-slider .swiper-container-horizontal > .swiper-pagination-bullets,
+.blog-slider .swiper-container-horizontal > .swiper-pagination-bullets,
 .blog-slider .swiper-pagination-custom,
 .blog-slider .swiper-pagination-fraction {
   bottom: 10px;
   left: 0;
   width: 100%;
 }
-#contact .blog-slider__pagination {
+.blog-slider__pagination {
   position: absolute;
   z-index: 21;
   right: 20px;
@@ -1524,13 +1694,11 @@ nav .n_btn .nav_btn.animate:after {
   transform: translateY(-50%);
 }
 
-#contact
-  .blog-slider__pagination.swiper-pagination-bullets
-  .swiper-pagination-bullet {
+.blog-slider__pagination.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 8px 0;
 }
 
-#contact .blog-slider__pagination .swiper-pagination-bullet {
+.blog-slider__pagination .swiper-pagination-bullet {
   width: 11px;
   height: 11px;
   display: block;
@@ -1539,14 +1707,14 @@ nav .n_btn .nav_btn.animate:after {
   opacity: 0.2;
   transition: all 0.3s;
 }
-#contact .blog-slider__pagination .swiper-pagination-bullet-active {
+.blog-slider__pagination .swiper-pagination-bullet-active {
   opacity: 1;
   background: #fd3838;
   height: 30px;
   box-shadow: 0px 0px 20px rgba(252, 56, 56, 0.3);
 }
 
-/*============================= contact form */
+/* contact form */
 
 #contact .contact_form form {
   display: flex;
@@ -1588,7 +1756,7 @@ nav .n_btn .nav_btn.animate:after {
   margin-top: 5px;
 }
 
-/*============================ footer styling */
+/* footer */
 footer {
   padding: 4% 0 0;
   background: var(--c3);
@@ -1647,12 +1815,11 @@ footer .icon i {
   color: var(--baby-blue);
   margin-right: 20px;
   border-radius: 30% 70% 67% 33% / 30% 30% 70% 70%;
-  transition: all 0.3s linear;
+  transition: all 0.2s;
   cursor: pointer;
 }
 footer .icon i:hover {
   transform: scale(1.1);
-  border-radius: 50%;
 }
 footer .links1 {
   text-align: left;
@@ -1672,10 +1839,6 @@ footer .links1 ul li a {
   color: var(--sect_bg2);
   font-size: 1.4em;
   font-weight: 300;
-  transition: all 0.3s ease;
-}
-footer .links1 ul li a:hover {
-  transform: scale(1.1);
 }
 footer .links1 .partners {
   padding: 0 20px;
@@ -1709,7 +1872,7 @@ footer .copyright {
   padding: 10px 0;
 }
 
-/* ===================== back to top */
+/* progress back to top */
 .back-to-top {
   visibility: hidden;
   background-color: var(--c2);

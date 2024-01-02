@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
-  <body data-spy="scroll">
+  <body>
     <!-- preloader -->
 
     <div id="pre">
@@ -73,7 +73,7 @@
     <!--===================================
       nav section starts here
       ==============================-->
-    <nav id="navBar">
+    <nav>
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-2 col-sm-4 col-md-4">
@@ -86,10 +86,10 @@
             </div>
           </div>
           <div class="col-lg-8 col-sm-8 col-md-8">
-            <div class="menu" id="nav_menu">
+            <div class="menu" id="menu">
               <i class="fa-solid fa-bars" id="bar" onclick="showMenu()"></i>
               <i class="fa-solid fa-xmark" id="hide" onclick="hideMenu()"></i>
-              <ul id="navbar_nav">
+              <ul class="navbar_nav">
                 <li id="m1">
                   <a class="nav_link" href="#">Home</a>
                 </li>
@@ -315,6 +315,11 @@
                 d="M900.648 445.16C900.648 445.16 906.506 439.085 910.524 443.304C914.542 447.524 907.302 453.151 904.234 451.148C901.166 449.146 900.648 445.16 900.648 445.16Z"
                 fill="#F7D399"
               />
+              <!-- <path
+                id="Vector_7"
+                d="M830.418 664.17C867.959 664.17 898.391 657.446 898.391 649.152C898.391 640.857 867.959 634.134 830.418 634.134C792.878 634.134 762.445 640.857 762.445 649.152C762.445 657.446 792.878 664.17 830.418 664.17Z"
+                fill="#343434b7"
+              /> -->
               <g id="jacket">
                 <path
                   id="Vector_8"
@@ -421,7 +426,7 @@
                     data-autoplay="true"
                     data-vbtype="video"
                     data-ratio="16x9"
-                    data-maxwidth="85%"
+                    data-maxwidth="80%"
                     href="https://youtu.be/2QEyCxEEAfY"
                   >
                     <i class="fa-solid fa-play pulse"></i>
@@ -446,28 +451,28 @@
             <div class="col-lg-3 col-6">
               <div class="counterup" data-aos="zoom-in-up">
                 <i class="fa-solid fa-face-smile-beam"></i>
-                <h2 class="counter-text"><span class="count_up">750</span>+</h2>
+                <h2 class="counter-text" data-number="750">+</h2>
                 <h3>Happy User</h3>
               </div>
             </div>
             <div class="col-lg-3 col-6">
               <div class="counterup" data-aos="zoom-in-up">
                 <i class="fa-solid fa-users"></i>
-                <h2 class="counter-text"><span class="count_up">95</span>%</h2>
+                <h2 class="counter-text" data-number="420">+</h2>
                 <h3>Positive Review</h3>
               </div>
             </div>
             <div class="col-lg-3 col-6">
               <div class="counterup" data-aos="zoom-in-up">
                 <i class="fa-solid fa-star"></i>
-                <h2 class="counter-text"><span class="count_up">4.8</span></h2>
+                <h2 class="counter-text" data-number="5"></h2>
                 <h3>Student Rating</h3>
               </div>
             </div>
             <div class="col-lg-3 col-6">
               <div class="counterup" data-aos="zoom-in-up">
                 <i class="fa-solid fa-book"></i>
-                <h2 class="counter-text"><span class="count_up">50</span>+</h2>
+                <h2 class="counter-text" data-number="40"></h2>
                 <h3>Courses</h3>
               </div>
             </div>
@@ -492,7 +497,13 @@
               <div class="col-lg-3">
                 <div class="u_card" data-aos="fade-right" data-aos-delay="50">
                   <div class="icon">
-                    <i class="fa-solid fa-download"></i>
+                    <picture>
+                      <img
+                        src="images/cloud-computing.png"
+                        alt="cloud-computing.png"
+                        loading="lazy"
+                      />
+                    </picture>
                   </div>
                   <div class="txt">
                     <h4>Install the app</h4>
@@ -518,7 +529,13 @@
               <div class="col-lg-3">
                 <div class="u_card" data-aos="fade-right" data-aos-delay="70">
                   <div class="icon">
-                    <i class="fa-solid fa-user-plus"></i>
+                    <picture>
+                      <img
+                        src="images/add-user.png"
+                        alt="add-user.png"
+                        loading="lazy"
+                      />
+                    </picture>
                   </div>
                   <div class="txt">
                     <h4>Create account</h4>
@@ -544,7 +561,13 @@
               <div class="col-lg-3">
                 <div class="u_card" data-aos="fade-right" data-aos-delay="90">
                   <div class="icon">
-                    <i class="fa-solid fa-book"></i>
+                    <picture>
+                      <img
+                        src="images/browsing.png"
+                        alt="browsing.png"
+                        loading="lazy"
+                      />
+                    </picture>
                   </div>
                   <div class="txt">
                     <h4>Browse courses</h4>
@@ -570,7 +593,13 @@
               <div class="col-lg-3">
                 <div class="u_card" data-aos="fade-left" data-aos-delay="50">
                   <div class="icon">
-                    <i class="fa-solid fa-graduation-cap"></i>
+                    <picture>
+                      <img
+                        src="images/cheers.png"
+                        alt="cheers.png"
+                        loading="lazy"
+                      />
+                    </picture>
                   </div>
                   <div class="txt">
                     <h4>Enjoy Your Course</h4>
@@ -596,7 +625,9 @@
               <div class="col-lg-3">
                 <div class="u_card" data-aos="fade-left" data-aos-delay="70">
                   <div class="icon">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <picture>
+                      <img src="images/buy.png" alt="buy.png" loading="lazy" />
+                    </picture>
                   </div>
                   <div class="txt">
                     <h4>Enroll Your Course</h4>
@@ -622,7 +653,13 @@
               <div class="col-lg-3">
                 <div class="u_card" data-aos="fade-left" data-aos-delay="90">
                   <div class="icon">
-                    <i class="fa-solid fa-clipboard-check"></i>
+                    <picture>
+                      <img
+                        src="images/choice.png"
+                        alt="choice.png"
+                        loading="lazy"
+                      />
+                    </picture>
                   </div>
                   <div class="txt">
                     <h4>Choose Course</h4>
@@ -718,7 +755,7 @@
                     <h3>Interactive Content</h3>
                     <p>
                       In elearning, interactive content is learning material
-                      that involve
+                      that
                     </p>
                   </div>
                 </div>
@@ -783,8 +820,7 @@
                   <div class="txt">
                     <h3>Certification</h3>
                     <p>
-                      In elearning, interactive content is learning material
-                      that involve
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
                   </div>
                 </div>
@@ -806,8 +842,7 @@
                   <div class="txt">
                     <h3>Video-based Content</h3>
                     <p>
-                      In elearning, interactive content is learning material
-                      that involve
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
                   </div>
                 </div>
@@ -823,163 +858,170 @@
     <!--===================================
          why us section starts here
        ==============================-->
-    <section id="why_us">
+    <section id="why_us" class="d-none">
       <div class="container">
         <div class="title">
           <h2 class="section-title">Why <span>Us ?</span></h2>
         </div>
+        <div class="main">
+          <section class="card-area">
+            <!-- Best Performance-->
+            <section class="card-section">
+              <div class="card">
+                <div class="flip-card">
+                  <div class="flip-card__container">
+                    <div class="card-front">
+                      <div class="card-front__tp card-front__tp--city">
+                        <picture>
+                          <img
+                            src="images/card_icon1.png"
+                            alt="card_icon1.png"
+                            loading="lazy"
+                          />
+                        </picture>
 
-        <!-- <div class="main">
-          <div class="flip">
-            <div
-              class="front card_front1"
-              data-aos="fade-right"
-              data-aos-easing="ease-in-sine"
-            >
-              <h1 class="text-shadow">Tutorials</h1>
-            </div>
-          </div>
-          <div class="flip">
-            <div
-              class="front card_front2"
-              data-aos="fade-right"
-              data-aos-easing="ease-in-sine"
-            >
-              <h1 class="text-shadow">24/7 Live Support</h1>
-            </div>
-          </div>
-          <div class="flip">
-            <div
-              class="front card_front3"
-              data-aos="fade-right"
-              data-aos-easing="ease-in-sine"
-            >
-              <h1 class="text-shadow">Quiz & Exam</h1>
-            </div>
-          </div>
-        </div>
-        <div class="main">
-          <div class="flip">
-            <div
-              class="front card_front4"
-              data-aos="fade-right"
-              data-aos-easing="ease-in-sine"
-            >
-              <h1 class="text-shadow">Beautiful, modern design</h1>
-            </div>
-          </div>
-          <div class="flip">
-            <div
-              class="front card_front5"
-              data-aos="fade-right"
-              data-aos-easing="ease-in-sine"
-            >
-              <h1 class="text-shadow">Easy to Use</h1>
-            </div>
-          </div>
-          <div class="flip">
-            <div
-              class="front card_front6"
-              data-aos="fade-right"
-              data-aos-easing="ease-in-sine"
-            >
-              <h1 class="text-shadow">Notify Users</h1>
-            </div>
-          </div>
-        </div> -->
-        <div class="main">
-          <div class="row card_gap">
-            <div class="col-lg-4 col-sm-6">
-              <div class="my_card">
-                <div class="card_body" data-aos="fade-right">
-                  <div class="icon">
-                    <i class="fa-solid fa-book-open"></i>
-                  </div>
-                  <div class="text">
-                    <h4>Tutorials</h4>
-                    <p>You can watch tutorials using this app in this app</p>
+                        <h2 class="card-front__heading">Best Performance</h2>
+                      </div>
+
+                      <div class="card-front__bt">
+                        <p
+                          class="card-front__text-view card-front__text-view--city"
+                        >
+                          See More
+                        </p>
+                      </div>
+                    </div>
+                    <div class="card-back">
+                      <video class="video__container" autoplay muted loop>
+                        <source
+                          class="video__media"
+                          src="videos/why_us1.mp4"
+                          type="video/mp4"
+                        />
+                      </video>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              <div class="my_card" data-aos="fade-left">
-                <div class="card_body">
-                  <div class="icon">
-                    <i class="fa-solid fa-comment-dots"></i>
-                  </div>
-                  <div class="text">
-                    <h4>Live Chat</h4>
-                    <p>You can ask any kind of course related question</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              <div class="my_card" data-aos="fade-right">
-                <div class="card_body">
-                  <div class="icon">
-                    <i class="fa-solid fa-chalkboard-user"></i>
-                  </div>
-                  <div class="text">
-                    <h4>Flexible</h4>
-                    <p>
-                      Working professionals and students can adjust their
-                      learning.
+
+                <div class="inside-page">
+                  <div class="inside-page__container">
+                    <h3 class="inside-page__heading inside-page__heading--city">
+                      Best Performance
+                    </h3>
+                    <p class="inside-page__text">
+                      A performance review is a regulated assessment in which
+                      managers evaluate
                     </p>
+                    <a href="#" class="inside-page__btn inside-page__btn--city"
+                      >View deals</a
+                    >
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              <div class="my_card" data-aos="fade-left">
-                <div class="card_body">
-                  <div class="icon">
-                    <i class="fa-solid fa-handshake"></i>
+              <div class="card">
+                <div class="flip-card">
+                  <div class="flip-card__container">
+                    <div class="card-front">
+                      <div class="card-front__tp card-front__tp--city">
+                        <picture>
+                          <img
+                            src="images/card_icon2.png"
+                            alt="card_icon2.png"
+                            loading="lazy"
+                          />
+                        </picture>
+
+                        <h2 class="card-front__heading">Hybrid Learning</h2>
+                      </div>
+
+                      <div class="card-front__bt">
+                        <p
+                          class="card-front__text-view card-front__text-view--city"
+                        >
+                          See More
+                        </p>
+                      </div>
+                    </div>
+                    <div class="card-back">
+                      <video class="video__container" autoplay muted loop>
+                        <source
+                          class="video__media"
+                          src="videos/why_us2.mp4"
+                          type="video/mp4"
+                        />
+                      </video>
+                    </div>
                   </div>
-                  <div class="text">
-                    <h4>User-Friendly</h4>
-                    <p>
-                      Working professionals and students can adjust their
-                      learning.
+                </div>
+
+                <div class="inside-page">
+                  <div class="inside-page__container">
+                    <h3 class="inside-page__heading inside-page__heading--city">
+                      Hybrid Learning
+                    </h3>
+                    <p class="inside-page__text">
+                      A performance review is a regulated assessment in which
+                      managers evaluate
                     </p>
+                    <a href="#" class="inside-page__btn inside-page__btn--city"
+                      >View deals</a
+                    >
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              <div class="my_card" data-aos="fade-right">
-                <div class="card_body">
-                  <div class="icon">
-                    <i class="fa-solid fa-brain"></i>
+              <div class="card">
+                <div class="flip-card">
+                  <div class="flip-card__container">
+                    <div class="card-front">
+                      <div class="card-front__tp card-front__tp--city">
+                        <picture>
+                          <img
+                            src="images/card_icon3.png"
+                            alt="card_icon3.png"
+                            loading="lazy"
+                          />
+                        </picture>
+
+                        <h2 class="card-front__heading">Certifications</h2>
+                      </div>
+
+                      <div class="card-front__bt">
+                        <p
+                          class="card-front__text-view card-front__text-view--city"
+                        >
+                          See More
+                        </p>
+                      </div>
+                    </div>
+                    <div class="card-back">
+                      <video class="video__container" autoplay muted loop>
+                        <source
+                          class="video__media"
+                          src="videos/why_us3.mp4"
+                          type="video/mp4"
+                        />
+                      </video>
+                    </div>
                   </div>
-                  <div class="text">
-                    <h4>Quiz Contest</h4>
-                    <p>
-                      Working professionals and students can adjust their
-                      learning.
+                </div>
+
+                <div class="inside-page">
+                  <div class="inside-page__container">
+                    <h3 class="inside-page__heading inside-page__heading--city">
+                      Certifications
+                    </h3>
+                    <p class="inside-page__text">
+                      A performance review is a regulated assessment in which
+                      managers evaluate
                     </p>
+                    <a href="#" class="inside-page__btn inside-page__btn--city"
+                      >View deals</a
+                    >
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              <div class="my_card" data-aos="fade-left">
-                <div class="card_body">
-                  <div class="icon">
-                    <i class="fa-solid fa-bell"></i>
-                  </div>
-                  <div class="text">
-                    <h4>Notify Users</h4>
-                    <p>
-                      We notify users about their course module and class
-                      update.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            </section>
+          </section>
         </div>
       </div>
     </section>
@@ -1246,333 +1288,127 @@
                       <div class="blog-slider__img">
                         <picture>
                           <img
-                            src="images/team/asif.png"
+                            src="images/team/team1.png"
                             alt="Asif"
                             loading="lazy"
                           />
                         </picture>
                       </div>
                       <div class="blog-slider__content">
-                        <span class="blog-slider__code"
-                          >Frontend Developer</span
-                        >
+                        <span class="blog-slider__code">Team Member</span>
                         <div class="blog-slider__title">MD ASIF</div>
                         <div class="blog-slider__text">
-                          I am a positive, enthusiastic and competent Web
-                          Designer.I guarantee I will perform highly in this
-                          role.
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Recusandae voluptate repellendus magni illo ea
+                          animi?
                         </div>
-                        <div class="icon">
-                          <a
-                            href="https://www.facebook.com/asif00B/"
-                            target="_blank"
-                            class="blog-slider__button"
-                          >
-                            <i class="fa-brands fa-facebook-f"></i>
-                          </a>
-                          <a href="#" class="blog-slider__button">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                          </a>
-                          <a href="#" class="blog-slider__button">
-                            <i class="fa-solid fa-envelope"></i>
-                          </a>
-                        </div>
+                        <a href="#" class="blog-slider__button">READ MORE</a>
                       </div>
                     </div>
                     <div class="blog-slider__item swiper-slide">
                       <div class="blog-slider__img">
                         <picture>
                           <img
-                            src="images/team/sakib.png"
-                            alt="sakib"
+                            src="images/team/badhon.jpg"
+                            alt="Badhon"
                             loading="lazy"
                           />
                         </picture>
                       </div>
                       <div class="blog-slider__content">
-                        <span class="blog-slider__code"
-                          >Frontend Developer</span
-                        >
-                        <div class="blog-slider__title">Afnan Sakib</div>
+                        <span class="blog-slider__code">Team Member</span>
+                        <div class="blog-slider__title">BADHON</div>
                         <div class="blog-slider__text">
-                          I am a positive, enthusiastic and competent Web
-                          Designer.I guarantee I will perform highly in this
-                          role.
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Recusandae voluptate repellendus magni illo ea
+                          animi?
                         </div>
-                        <div class="icon">
-                          <a
-                            href="https://www.facebook.com/Md5.Sakib?mibextid=ZbWKwL"
-                            target="_blank"
-                            class="blog-slider__button"
-                          >
-                            <i class="fa-brands fa-facebook-f"></i>
-                          </a>
-                          <a href="#" class="blog-slider__button">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                          </a>
-                          <a href="#" class="blog-slider__button">
-                            <i class="fa-solid fa-envelope"></i>
-                          </a>
+                        <a href="#" class="blog-slider__button">READ MORE</a>
+                      </div>
+                    </div>
+
+                    <div class="blog-slider__item swiper-slide">
+                      <div class="blog-slider__img">
+                        <picture>
+                          <img
+                            src="images/team/Jahid.jpg"
+                            alt="Jahid"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
+                      <div class="blog-slider__content">
+                        <span class="blog-slider__code">Team Member</span>
+                        <div class="blog-slider__title">JAHID HASAN</div>
+                        <div class="blog-slider__text">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Recusandae voluptate repellendus magni illo ea
+                          animi?
                         </div>
+                        <a href="#" class="blog-slider__button">READ MORE</a>
                       </div>
                     </div>
                     <div class="blog-slider__item swiper-slide">
                       <div class="blog-slider__img">
                         <picture>
                           <img
-                            src="images/team/mohsin.png"
-                            alt="mohsin"
+                            src="images/team/mahibul.jpg"
+                            alt="Mahibul"
                             loading="lazy"
                           />
                         </picture>
                       </div>
                       <div class="blog-slider__content">
-                        <span class="blog-slider__code"
-                          >Frontend Developer</span
-                        >
-                        <div class="blog-slider__title">Mohsin Reza</div>
+                        <span class="blog-slider__code">Team Member</span>
+                        <div class="blog-slider__title">MAHIBUL ISLAM</div>
                         <div class="blog-slider__text">
-                          I am a positive, enthusiastic and competent Web
-                          Designer.I guarantee I will perform highly in this
-                          role.
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Recusandae voluptate repellendus magni illo ea
+                          animi?
                         </div>
-                        <div class="icon">
-                          <a
-                            href="https://www.facebook.com/Md5.Sakib?mibextid=ZbWKwL"
-                            target="_blank"
-                            class="blog-slider__button"
-                          >
-                            <i class="fa-brands fa-facebook-f"></i>
-                          </a>
-                          <a href="#" class="blog-slider__button">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                          </a>
-                          <a href="#" class="blog-slider__button">
-                            <i class="fa-solid fa-envelope"></i>
-                          </a>
-                        </div>
+                        <a href="#" class="blog-slider__button">READ MORE</a>
                       </div>
                     </div>
                     <div class="blog-slider__item swiper-slide">
                       <div class="blog-slider__img">
                         <picture>
                           <img
-                            src="images/team/badhon.png"
-                            alt="bipul"
+                            src="images/team/rakibul.jpg"
+                            alt="Rakibul"
                             loading="lazy"
                           />
                         </picture>
                       </div>
                       <div class="blog-slider__content">
-                        <span class="blog-slider__code"
-                          >Frontend Developer</span
-                        >
-                        <div class="blog-slider__title">MD Bipul Islam</div>
+                        <span class="blog-slider__code">Team Member</span>
+                        <div class="blog-slider__title">RAKIBUL ISLAM</div>
                         <div class="blog-slider__text">
-                          I am a positive, enthusiastic and competent Web
-                          Designer.I guarantee I will perform highly in this
-                          role.
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Recusandae voluptate repellendus magni illo ea
+                          animi?
                         </div>
-                        <div class="icon">
-                          <a
-                            href="https://www.facebook.com/badhon.islam.bi47?mibextid=ZbWKwL"
-                            target="_blank"
-                            class="blog-slider__button"
-                          >
-                            <i class="fa-brands fa-facebook-f"></i>
-                          </a>
-                          <a href="#" class="blog-slider__button">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                          </a>
-                          <a href="#" class="blog-slider__button">
-                            <i class="fa-solid fa-envelope"></i>
-                          </a>
-                        </div>
+                        <a href="#" class="blog-slider__button">READ MORE</a>
                       </div>
                     </div>
                     <div class="blog-slider__item swiper-slide">
                       <div class="blog-slider__img">
                         <picture>
                           <img
-                            src="images/team/mahibul.png"
-                            alt="mahibul"
+                            src="images/team/shimu.jpg"
+                            alt="Shimu"
                             loading="lazy"
                           />
                         </picture>
                       </div>
                       <div class="blog-slider__content">
-                        <span class="blog-slider__code"
-                          >Frontend Developer</span
-                        >
-                        <div class="blog-slider__title">Mahibul Islam</div>
+                        <span class="blog-slider__code">Team Member</span>
+                        <div class="blog-slider__title">SHIMU AKTER</div>
                         <div class="blog-slider__text">
-                          I am a positive, enthusiastic and competent Web
-                          Designer.I guarantee I will perform highly in this
-                          role.
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Recusandae voluptate repellendus magni illo ea
+                          animi?
                         </div>
-                        <div class="icon">
-                          <a
-                            href="https://www.facebook.com/profile.php?id=100026641082794&mibextid=ZbWKwL"
-                            class="blog-slider__button"
-                          >
-                            <i class="fa-brands fa-facebook-f"></i>
-                          </a>
-                          <a href="#" class="blog-slider__button">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                          </a>
-                          <a href="#" class="blog-slider__button">
-                            <i class="fa-solid fa-envelope"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="blog-slider__item swiper-slide">
-                      <div class="blog-slider__img">
-                        <picture>
-                          <img
-                            src="images/team/shimu.png"
-                            alt="shimu"
-                            loading="lazy"
-                          />
-                        </picture>
-                      </div>
-                      <div class="blog-slider__content">
-                        <span class="blog-slider__code"
-                          >Frontend Developer</span
-                        >
-                        <div class="blog-slider__title">Shimu Akter</div>
-                        <div class="blog-slider__text">
-                          I am a positive, enthusiastic and competent Web
-                          Designer.I guarantee I will perform highly in this
-                          role.
-                        </div>
-                        <div class="icon">
-                          <a
-                            href="https://www.facebook.com/shimu82?mibextid=ZbWKwL"
-                            target="_blank"
-                            class="blog-slider__button"
-                          >
-                            <i class="fa-brands fa-facebook-f"></i>
-                          </a>
-                          <a href="#" class="blog-slider__button">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                          </a>
-                          <a href="#" class="blog-slider__button">
-                            <i class="fa-solid fa-envelope"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="blog-slider__item swiper-slide">
-                      <div class="blog-slider__img">
-                        <picture>
-                          <img
-                            src="images/team/rakibul.png"
-                            alt="rakibul"
-                            loading="lazy"
-                          />
-                        </picture>
-                      </div>
-                      <div class="blog-slider__content">
-                        <span class="blog-slider__code"
-                          >Frontend Developer</span
-                        >
-                        <div class="blog-slider__title">MD Rakubul Islam</div>
-                        <div class="blog-slider__text">
-                          I am a positive, enthusiastic and competent Web
-                          Designer.I guarantee I will perform highly in this
-                          role.
-                        </div>
-                        <div class="icon">
-                          <a
-                            href="https://www.facebook.com/profile.php?id=100041316525959&mibextid=ZbWKwL"
-                            target="_blank"
-                            class="blog-slider__button"
-                          >
-                            <i class="fa-brands fa-facebook-f"></i>
-                          </a>
-                          <a href="#" class="blog-slider__button">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                          </a>
-                          <a href="#" class="blog-slider__button">
-                            <i class="fa-solid fa-envelope"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="blog-slider__item swiper-slide">
-                      <div class="blog-slider__img">
-                        <picture>
-                          <img
-                            src="images/team/jahid.png"
-                            alt="jahid"
-                            loading="lazy"
-                          />
-                        </picture>
-                      </div>
-                      <div class="blog-slider__content">
-                        <span class="blog-slider__code"
-                          >Frontend Developer</span
-                        >
-                        <div class="blog-slider__title">Jahid Hasan</div>
-                        <div class="blog-slider__text">
-                          I am a positive, enthusiastic and competent Web
-                          Designer.I guarantee I will perform highly in this
-                          role.
-                        </div>
-                        <div class="icon">
-                          <a
-                            href="https://www.facebook.com/mahamudul.hasan.242?mibextid=ZbWKwL"
-                            target="_blank"
-                            class="blog-slider__button"
-                          >
-                            <i class="fa-brands fa-facebook-f"></i>
-                          </a>
-                          <a href="#" class="blog-slider__button">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                          </a>
-                          <a href="#" class="blog-slider__button">
-                            <i class="fa-solid fa-envelope"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="blog-slider__item swiper-slide">
-                      <div class="blog-slider__img">
-                        <picture>
-                          <img
-                            class="h-100"
-                            src="images/team/shohan.png"
-                            alt="shohan"
-                            loading="lazy"
-                          />
-                        </picture>
-                      </div>
-                      <div class="blog-slider__content">
-                        <span class="blog-slider__code"
-                          >Frontend Developer</span
-                        >
-                        <div class="blog-slider__title">Jahid Hasan</div>
-                        <div class="blog-slider__text">
-                          I am a positive, enthusiastic and competent Web
-                          Designer.I guarantee I will perform highly in this
-                          role.
-                        </div>
-                        <div class="icon">
-                          <a
-                            href="https://www.facebook.com/mahamudul.hasan.242?mibextid=ZbWKwL"
-                            target="_blank"
-                            class="blog-slider__button"
-                          >
-                            <i class="fa-brands fa-facebook-f"></i>
-                          </a>
-                          <a href="#" class="blog-slider__button">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                          </a>
-                          <a href="#" class="blog-slider__button">
-                            <i class="fa-solid fa-envelope"></i>
-                          </a>
-                        </div>
+                        <a href="#" class="blog-slider__button">READ MORE</a>
                       </div>
                     </div>
                   </div>
@@ -1768,32 +1604,27 @@
          script links starts here
        ==============================-->
     <script src="js/bootstrap.bundle.min.js"></script>
-    <!-- jquery -->
+    <!-- jq -->
     <script
-      src="https://code.jquery.com/jquery-1.12.4.min.js"
-      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
       crossorigin="anonymous"
     ></script>
-    <!-- jquery -->
+    <!-- jq -->
     <!-- venobox -->
     <script src="js/venobox.min.js"></script>
-    <!-- counterup -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <!-- counterup -->
     <!-- swiper -->
     <script src="js/swiper.min.js"></script>
     <!-- swiper -->
     <!-- owl -->
     <script src="js/owl.carousel.min.js"></script>
     <!-- owl -->
-    <!-- aos -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <!-- aos -->
     <script src="js/flickity.pkgd.min.js"></script>
     <script src="js/typed.min.js"></script>
     <script src="js/particles.min.js"></script>
     <script src="js/ps.js"></script>
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
